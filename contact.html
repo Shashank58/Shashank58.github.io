@@ -1,0 +1,123 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.js"></script>
+		<title>Contacts</title>
+        <style type="text/css">
+        body{
+            background-color: lightgray;
+        }
+        h2{
+            padding-top: 10px;
+            text-align: center;
+            color: chocolate;
+        }
+        .main{
+            border: 2px solid black;
+            width: 750px;
+            margin-left: 300px;
+        }
+        #form-content{
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        .register{
+            padding: 10px;
+        }
+        .fieldgroup{
+            margin-left: 30px;
+            line-height: 50px;
+            font-weight: bold;
+        }
+        #name{
+            margin-left: 20px;
+        }
+        #mobile{
+            margin-left: 147px;
+        }
+        #cemail{
+            margin-left: 154px;
+        }
+        #ccomment{
+            margin-left: 130px;
+        }
+        #submit{
+            margin-top: 20px;
+            margin-left: 200px;
+        }
+        span{
+            color: red;
+        }
+        </style>
+	</head>
+	<body>
+    <div class="main">
+    <h2>User Registration</h2>
+
+    <div class="register">
+        <form id="form-content">
+            <fieldset>
+            <div class="fieldgroup">
+                <label for="name">Name<span>(Required atleast 2 characters)</span></label>
+                <input id="name" type="text" name="name" />
+            </div>
+
+            <div class="fieldgroup">
+                <label for="mobile">Mobile<span>(Required)</span></label>
+                <input id="mobile" type="number" name="mobile"/>
+            </div>
+
+            <div class="fieldgroup">
+                <label for="cemail">Email<span>(Required)</span></label>
+                <input id="cemail" type="email" name="email" />
+            </div>
+
+            <div class="fieldgroup">
+                <label for="ccomment">Comment<span>(Required)</span></label>
+                <input id="ccomment" type="text" name="comment" />
+            </div>
+
+            <div class="fieldgroup">
+                <input type="submit" value="Submit" id="submit" />
+            </div>
+            </fieldset>
+        </form>
+    </div>
+    </div>
+    <script>
+        $("#form-content").validate({
+            rules: {
+                mobile: {
+                    required: true,
+                    minlength: 10,
+                    maxlength: 10
+                },
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                email: {
+                    required : true,
+                    email: true
+                },
+                comment: {
+                    required: true
+                }
+            },
+            messages:{
+                mobile:{
+                    minlength: jQuery.validator.format("{0} digits required!"),
+                    maxlength: jQuery.validator.format("There are more than {0} digits!")
+                },
+                name: {
+                    required: "Name is required",
+                    minlength: "Should be atleast 2 chars"
+                },
+                email: {
+                    email: "Enter correct format"
+                }
+            },
+        });
+    </script>
+    </body>
+</html>
