@@ -15,7 +15,7 @@ window.fakeStorage = {
 
   clear: function () {
     return this._data = {};
-  }
+  } 
 };
 
 function LocalStorageManager() {
