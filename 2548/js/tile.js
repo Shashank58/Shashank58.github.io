@@ -2,7 +2,7 @@ function Tile(position, value, index) {
   this.x                = position.x;
   this.y                = position.y;
   this.value            = value || 2;
-  this.index            = index;
+ // this.index            = index;
 
   this.previousPosition = null;
   this.mergedFrom       = null; // Tracks tiles that merged together

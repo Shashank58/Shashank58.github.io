@@ -4,7 +4,7 @@ function GameManager(size, InputManager, Actuator, StorageManager) {
   this.storageManager = new StorageManager;
   this.actuator       = new Actuator;
 
-  this.startTiles     = 2;
+  this.startTiles     = 3;
 
   this.inputManager.on("move", this.move.bind(this));
   this.inputManager.on("restart", this.restart.bind(this));
@@ -68,8 +68,15 @@ GameManager.prototype.addStartTiles = function () {
 // Adds a tile in a random position
 GameManager.prototype.addRandomTile = function () {
   if (this.grid.cellsAvailable()) {
-    var value = 1;
-    var tile = new Tile(this.grid.randomAvailableCell(), value, 0);
+    var value = getNum();
+    function getNum(){
+      var num = Math.random();
+      if(num < 0.6) return 1;  
+      else if(num < 0.9) return 2; 
+      else return 3;
+    }
+   // var value = 1;
+    var tile = new Tile(this.grid.randomAvailableCell(), value);
 
     this.grid.insertTile(tile);
   }
@@ -156,7 +163,7 @@ GameManager.prototype.move = function (direction) {
         //if (next && next.value === tile.value && !next.mergedFrom) {
         if (next && self.canMerge(tile, next) && !next.mergedFrom){
           // var merged = new Tile(positions.next, tile.value * 2);
-          var merged = new Tile(positions.next, tile.value + next.value, Math.max(tile.index, next.index) + 1);
+          var merged = new Tile(positions.next, tile.value + next.value);
           merged.mergedFrom = [tile, next];
 
           self.grid.insertTile(merged);
@@ -271,7 +278,28 @@ GameManager.prototype.tileMatchesAvailable = function () {
 };
 
 GameManager.prototype.canMerge = function(first, second) {
-  return (first.value === 1 && second.value === 1) || Math.abs(first.index - second.index) === 1
+  //return (first.value === 1 && second.value === 1) || Math.abs(first.index - second.index) === 1
+  if (first.value === 1 && second.value === 1)
+    return true;
+  else
+  {
+      var minimum = Math.min(first.value, second.value);
+      var f1 = 0;
+      var f2 = 1;
+      var x = 0;
+      while(x < minimum)
+      {
+        x = f1 + f2;
+        f1 = f2;
+        f2 = x; 
+      }
+      if (Math.abs(first.value - second.value) === f1){
+        return true;
+      }
+      else{
+        return false;
+      }
+  }
 }
 
 GameManager.prototype.positionsEqual = function (first, second) {
