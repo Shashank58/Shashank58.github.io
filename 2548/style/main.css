@@ -1,4 +1,17 @@
 @import url(fonts/clear-sans.css);
+.navi{
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 20px;
+  line-height: 90px;
+  padding: 260px;
+  
+}
+
+.navi, li{
+  list-style-type: none;
+}
+
 html, body {
   margin: 0;
   padding: 0;
