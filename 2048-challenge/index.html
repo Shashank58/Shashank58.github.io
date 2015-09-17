@@ -12,12 +12,13 @@
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
 <body>
-  <div class="navi">
-    <ul>
-      <li> <a href="../index.html">Home</a> </li>
-      <li> <a href="#">2048</a> </li>
-      <li> <a href="../2548/index.html">2548</a> </li>
-    </ul>
+  <div id="nav">
+      <ul class="constant">
+        <li><a href="../index.html"><h2>Home</h2></a></li>
+        <li><a href="#"><h2>2048</h2></a></li>
+        <li><a href="../2548/index.html"><h2>2548</h2></a></li>
+        <li><a href="../ColourFlood/index.html"><h2>Colour Flood</h2></a></li>
+      </ul>
   </div>
   <div class="container">
     <div class="heading">
@@ -100,6 +101,9 @@
     window.onload = function() {
       MyGame.restart();  
     };
+    function restart(){
+      MyGame.restart();
+    }
   </script>
 </body>
 </html>

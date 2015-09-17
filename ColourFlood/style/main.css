@@ -1,0 +1,103 @@
+#entire-game{
+    position: relative; 
+    padding-top: 60px;
+    padding-left: 400px;
+}
+
+.piece {
+    width: 28px;
+    height: 30px;
+    border:0px;
+}
+
+.button {
+    width: 25px;
+    height: 30px;
+    border:0px;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: #0F0;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.violet {
+    background-color: violet;
+}
+
+.orange {
+    background-color: orange;
+}
+
+#game-table {
+    margin:0px;
+    border:0px;
+    padding: 0px;
+    border-spacing:0px;
+}
+
+#button-table {
+    border-spacing:4px;
+}
+
+#turn-counter {
+    font-family: sans-serif;
+}
+
+.options{
+  position: absolute;
+  margin-top: 400px;
+  margin-left: 200px;
+}
+
+body{
+    background-color: lightgray;
+}
+
+#nav{
+    background-color: black;
+    width: 1100px;
+    height: 80px;
+    margin-left: 130px;
+    margin-top: 0;
+    padding: 0;
+}
+
+.constant li{
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 60px;
+    padding-top: 5px;
+    padding-left: 70px;
+}
+
+.constant li a{
+    text-decoration: none;
+}
+
+.constant li a h2{
+    color: white;
+}
+
+#footer{
+    background-color: black;
+    width: 1100px;
+    margin-left: 130px;
+    height: 30px;
+    position: relative;
+    margin-top: 450px;
+    color: white;
+    text-align: center;
+}
+

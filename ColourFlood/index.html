@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>Colour Flood</title>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+  </head>
+  <body>
+    <div id="nav">
+      <ul class="constant">
+        <li><a href="../index.html"><h2>Home</h2></a></li>
+        <li><a href="../2048-challenge/index.html"><h2>2048</h2></a></li>
+        <li><a href="../2548/index.html"><h2>2548</h2></a></li>
+        <li><a href="#"><h2>Colour Flood</h2></a></li>
+      </ul>
+    </div>
+    <div id="entire-game">
+    <table>
+      <tr>
+        <td valign="top">
+          <table>
+            <tr class="options">
+              
+              <td >
+                <table id="button-table">
+                  <tr>
+                    <td class="button blue" onclick="flood ('blue')">
+                    </td>
+                    <td class="button red" onclick="flood ('red')">
+                    </td>
+                    <td class="button green" onclick="flood ('green')">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="button yellow" onclick="flood ('yellow')">
+                    </td>
+                    <td class="button orange" onclick="flood ('orange')">
+                    </td>
+                    <td class="button violet" onclick="flood ('violet')">
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              
+            </tr>
+            <tr valign="top">
+              <td id="turn-counter" valign="top">
+                Turn: <span id="moves"></span>/<span id="max-moves">22</span>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td valign="top">
+                <input type="submit" value="New game" onclick="new_game ()">
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <table id="game-table">
+            
+          </table>
+        </td> 
+            
+      </tr>
+    </table>
+    </div>
+  </body>
+  <script src="floodScript.js"></script>
+</html>
