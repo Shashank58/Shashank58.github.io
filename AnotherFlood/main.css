@@ -29,9 +29,9 @@ body {
   clear: both; }
 
 h1.title {
-  font-size: 80px;
+  font-size: 40px;
   font-weight: bold;
-  margin: 0;
+  margin: 20;
   display: block;
   float: left; }
 
@@ -60,6 +60,7 @@ h1.title {
     top: -50px;
     opacity: 0; } }
 .scores-container {
+  margin-top: 10px;
   float: right;
   text-align: right; }
 
@@ -103,10 +104,10 @@ h1.title {
     animation-fill-mode: both; }
 
 .score-container:after {
-  content: "Score"; }
+  content: "Moves"; }
 
 .best-container:after {
-  content: "Best"; }
+  content: "Permitted"; }
 
 p {
   margin-top: 0;
@@ -151,7 +152,8 @@ hr {
   100% {
     opacity: 1; } }
 .game-container {
-  margin-top: 40px;
+  margin-top: 30px;
+  margin-left: 20px;
   position: relative;
   padding: 15px;
   cursor: default;
@@ -164,8 +166,8 @@ hr {
   touch-action: none;
   background: #bbada0;
   border-radius: 6px;
-  width: 500px;
-  height: 500px;
+  width: 465px;
+  height: 465px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -219,7 +221,7 @@ hr {
   z-index: 1; }
 
 .grid-row {
-  margin-bottom: 15px; }
+  margin-bottom: 0px; }
   .grid-row:last-child {
     margin-bottom: 0; }
   .grid-row:after {
@@ -228,11 +230,11 @@ hr {
     clear: both; }
 
 .grid-cell {
-  width: 106.25px;
-  height: 106.25px;
-  margin-right: 15px;
+  width: 36.25px;
+  height: 36.25px;
+  margin-right: 0px;
   float: left;
-  border-radius: 3px;
+  border-radius: 0px;
   background: rgba(238, 228, 218, 0.35); }
   .grid-cell:last-child {
     margin-right: 0; }
@@ -510,7 +512,8 @@ hr {
   line-height: 42px;
   display: block;
   text-align: center;
-  float: right; }
+  margin-left: 350px;
+  margin-top: 20px; }
 
 .game-explanation {
   margin-top: 50px; }
@@ -525,7 +528,7 @@ hr {
 
   h1.title {
     font-size: 27px;
-    margin-top: 15px; }
+    margin-top: 45px; }
 
   .container {
     width: 280px;
@@ -762,4 +765,40 @@ body{
   margin-top: 350px;
   color: white;
   text-align: center;
+}
+
+.buttons{
+  margin-top: 20px;
+  margin-left: 80px;
+}
+
+.buttons table tr td{
+  color: blue;
+  width: 45px;
+  height: 45px;
+  padding-top : 20px;
+}
+
+.Red{
+  background-color: red;
+}
+
+.Violet{
+  background-color: violet;
+}
+
+.Green{
+  background-color: green;
+}
+
+.Yellow{
+  background-color: yellow;
+}
+
+.Orange{
+  background-color: orange;
+}
+
+.Blue{
+  background-color: blue;
 }
